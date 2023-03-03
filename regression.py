@@ -4,19 +4,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsRegressor
 
 
-def store_cities(cities):
-    """
-    Function to store the cities in the CSV file
-    """
-    zeros = []
-    for _ in cities:
-        zeros.append(0)
-
-    data = {"city": cities, "zero": zeros}
-    pd.DataFrame(data).to_csv("cities.csv", index=False)
-    return
-
-
 def preprocess_dataframe(df):
     """Function to preprocess the dataframe
 
